@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MultCloud Sync Dashboard</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googlecloud.svg" alt="Logo" />
+        <span>MultCloud Sync</span>
+      </div>
+      <nav>
+        <ul>
+          <li class="active"><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledrive.svg" /> Google Drive</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/dropbox.svg" /> Dropbox</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftonedrive.svg" /> OneDrive</li>
+          <li><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" /> AWS S3</li>
+          <li><span class="icon">📁</span> All Files</li>
+          <li><span class="icon">⏰</span> Recent</li>
+          <li><span class="icon">🔗</span> Shared</li>
+          <li><span class="icon">🔄</span> Sync Status</li>
+          <li><span class="icon">⚙️</span> Settings</li>
+        </ul>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="header">
+        <h1>File Browser</h1>
+        <input type="text" placeholder="Search files" class="search" />
+        <div class="user-icon">👤</div>
+      </header>
+      <section class="file-browser">
+        <div class="file-browser-header">
+          <h2>File Browser</h2>
+          <div class="actions">
+            <button>Upload</button>
+            <button>New Folder</button>
+            <button class="sync">Sync Now</button>
+          </div>
+        </div>
+        <table class="file-table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Source</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><span class="folder"></span> Documents</td>
+              <td><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledrive.svg" class="icon-sm" /></td>
+              <td><span class="status success"></span></td>
+            </tr>
+            <tr>
+              <td><span class="folder"></span> Photos</td>
+              <td><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledrive.svg" class="icon-sm" /></td>
+              <td><span class="status loading"></span></td>
+            </tr>
+            <tr>
+              <td><span class="folder aws"></span> AWS S3</td>
+              <td><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/amazonaws.svg" class="icon-sm" /></td>
+              <td><span class="status success"></span></td>
+            </tr>
+            <tr>
+              <td><span class="file doc"></span> Report.docx</td>
+              <td><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/googledrive.svg" class="icon-sm" /></td>
+              <td><span class="status success"></span></td>
+            </tr>
+            <tr>
+              <td><span class="file img"></span> Image.png</td>
+              <td><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftonedrive.svg" class="icon-sm" /></td>
+              <td><span class="status loading"></span></td>
+            </tr>
+            <tr>
+              <td><span class="file ppt"></span> Presentation.pptx</td>
+              <td><img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/microsoftonedrive.svg" class="icon-sm" /></td>
+              <td><span class="status success"></span></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

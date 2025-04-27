@@ -1,0 +1,199 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
+}
+.container {
+  display: flex;
+  height: 100vh;
+}
+.sidebar {
+  width: 250px;
+  background: #f4f7fb;
+  border-right: 1px solid #e0e6ed;
+  display: flex;
+  flex-direction: column;
+  padding: 24px 0;
+}
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 32px;
+  padding-left: 32px;
+  gap: 10px;
+}
+.logo img {
+  width: 32px;
+  height: 32px;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 32px;
+  cursor: pointer;
+  color: #222b45;
+  border-left: 4px solid transparent;
+  transition: background 0.2s, border 0.2s;
+}
+.sidebar nav ul li.active, .sidebar nav ul li:hover {
+  background: #eaf1fb;
+  border-left: 4px solid #4285f4;
+  color: #4285f4;
+}
+.sidebar nav ul li img, .sidebar nav ul li .icon {
+  width: 20px;
+  height: 20px;
+}
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 32px 0 32px;
+}
+.header h1 {
+  font-size: 2rem;
+  margin: 0;
+}
+.search {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #e0e6ed;
+  font-size: 1rem;
+  width: 250px;
+  background: #fff;
+}
+.user-icon {
+  font-size: 1.7rem;
+  background: #eaf1fb;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.file-browser {
+  background: #fff;
+  margin: 32px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(60,72,88,0.07);
+  padding: 32px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.file-browser-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+.file-browser-header h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+.actions button {
+  margin-left: 12px;
+  padding: 8px 18px;
+  border: none;
+  border-radius: 8px;
+  background: #eaf1fb;
+  color: #222b45;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.actions .sync {
+  background: #4285f4;
+  color: #fff;
+}
+.actions button:hover {
+  background: #d2e3fc;
+}
+.file-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 1rem;
+}
+.file-table th, .file-table td {
+  padding: 14px 12px;
+  text-align: left;
+}
+.file-table thead {
+  background: #f4f7fb;
+}
+.file-table tbody tr {
+  border-bottom: 1px solid #e0e6ed;
+}
+.folder, .file {
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  margin-right: 8px;
+  vertical-align: middle;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.folder {
+  background-image: url('https://img.icons8.com/fluency/48/folder-invoices.png');
+}
+.folder.aws {
+  background-image: url('https://img.icons8.com/color/48/amazon-s3.png');
+}
+.file.doc {
+  background-image: url('https://img.icons8.com/color/48/ms-word.png');
+}
+.file.img {
+  background-image: url('https://img.icons8.com/color/48/image.png');
+}
+.file.ppt {
+  background-image: url('https://img.icons8.com/color/48/ms-powerpoint.png');
+}
+.icon-sm {
+  width: 20px;
+  height: 20px;
+}
+.status {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+.status.success {
+  background: #4caf50;
+  position: relative;
+}
+.status.success::after {
+  content: '\2713';
+  color: #fff;
+  font-size: 1rem;
+  position: absolute;
+  left: 4px;
+  top: 1px;
+}
+.status.loading {
+  background: #fbc02d;
+  position: relative;
+  animation: spin 1s linear infinite;
+}
+.status.loading::after {
+  content: '';
+}
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
